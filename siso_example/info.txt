@@ -1,0 +1,4 @@
+This is the Simulink/Matlab (R2021a) code used to simulate the general SISO fixed-time UBLF controller in section 3.1 of the paper
+
+- Trajectory/Tracking Error graphs on floating scopes on top level
+- Controller parameters for three compared controllers (fxt-UBLF, BLF, Backstepping) can be changed within the matlab block inside the controler sub-systems
