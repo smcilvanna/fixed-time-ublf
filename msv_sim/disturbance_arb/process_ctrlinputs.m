@@ -1,0 +1,19 @@
+function [rms_val, pk, tot] = process_ctrlinputs(d_source,dist_start)
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
+
+    rms_val = [ rms(d_source(1).values(dist_start:end)), ...
+                rms(d_source(2).values(dist_start:end)), ...
+                rms(d_source(3).values(dist_start:end))     ];
+
+    pk      = [ max( max(d_source(1).values(dist_start:end)), abs(min(d_source(1).values(dist_start:end))) ), ...
+                max( max(d_source(2).values(dist_start:end)), abs(min(d_source(2).values(dist_start:end))) ), ...
+                max( max(d_source(3).values(dist_start:end)), abs(min(d_source(3).values(dist_start:end))) ) ];
+            
+    tot     = [ sum(abs(d_source(1).values(dist_start:end))), ...
+                sum(abs(d_source(2).values(dist_start:end))), ...
+                sum(abs(d_source(3).values(dist_start:end))) ];
+            
+            
+end
+
